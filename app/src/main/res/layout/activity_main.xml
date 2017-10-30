@@ -1,17 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.beacons.harold.appointmentbeacon.MainActivity">
 
+
     <TextView
+        android:id="@+id/search_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:textSize="26sp"
+        android:padding="14dp"
+        android:text="Searching beacons" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_search_beacon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:onClick="searchBeacon"/>
+
+        <TextView
+            android:id="@+id/bluetooth_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:padding="14dp"
+            android:text="Bluetooth Status" />
+
+        <Button
+            android:id="@+id/btn_info_device_bth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Details"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#fff"
+            android:padding="13dp"
+            android:onClick="getPhoneDetails"/>
+
+        <TextView
+            android:id="@+id/phone_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:padding="14dp"
+            android:text="Unique ID" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

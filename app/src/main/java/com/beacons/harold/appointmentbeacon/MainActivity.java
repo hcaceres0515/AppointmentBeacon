@@ -6,6 +6,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -81,9 +83,16 @@ public class MainActivity extends AppCompatActivity {
         String m_deviceId = TelephonyMgr.getDeviceId();
 
         TextView phoneDetail = (TextView) findViewById(R.id.phone_detail);
-        phoneDetail.setText("UNIQUE ID: "  + m_deviceId);
+//        phoneDetail.setText("UNIQUE ID: "  + m_deviceId);
+
+        WifiManager manager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        WifiInfo info = manager.getConnectionInfo();
+        String address = info.getMacAddress();
 
         Log.d("My getPhoneDetail", "UNIQUE ID: "  + m_deviceId);
+        Log.d("My getPhoneDetail", "MAC ADDRESS: "  + address);
+
+        phoneDetail.setText("UNIQUE ID:\n"  + m_deviceId + "\nMACADDRESS:\n"  + address);
     }
 
     public void displayBluetoothStatusMessage(String message) {

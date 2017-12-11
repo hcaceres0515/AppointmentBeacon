@@ -25,7 +25,7 @@
             android:id="@+id/btn_search_beacon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search"
+            android:text="Status"
             android:onClick="searchBeacon"/>
 
         <TextView
@@ -58,7 +58,7 @@
             android:id="@+id/btn_show_beacon_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Change Layout"
+            android:text="Search beacons"
             android:background="@color/colorAccent"
             android:padding="13dp"
             android:onClick="changeLayout"/>

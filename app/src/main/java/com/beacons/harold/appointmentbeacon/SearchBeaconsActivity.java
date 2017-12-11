@@ -149,7 +149,7 @@ public class SearchBeaconsActivity extends AppCompatActivity {
             //connectToDevice(btDevice);
             Log.i("stop", "Scan stop");
             TextView t = (TextView) findViewById(R.id.search_title2);
-            t.setText("Beacon found: " + result.getDevice().toString() + "\nPower Transmition: " + txPowerLevel);
+            t.setText("Beacon found - MAC: " + result.getDevice().toString() + "\nPower Transmition: " + txPowerLevel);
             scanLeDevice(false);
         }
 

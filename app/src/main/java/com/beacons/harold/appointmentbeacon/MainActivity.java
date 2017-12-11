@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void changeLayout(View view) {
-        Intent intent = new Intent(this, SearchBeaconsActivity.class);
+        Intent intent = new Intent(this, RangingActivity.class);
         startActivity(intent);
         Log.v("Button event", "change layout to scan beacons");
     }
